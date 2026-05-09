@@ -17,7 +17,7 @@ const Login = () => {
     setError(null);
 
     try {
-      const res = await axios.post("https://ems-project-ah24.vercel.app/api/auth/login", {
+      const res = await axios.post("https://ems-backend-seven.vercel.app/api/auth/login", {
         email,
         password
       });
