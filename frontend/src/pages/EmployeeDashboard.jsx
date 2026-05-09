@@ -1,6 +1,6 @@
 import Sidebar from "../components/EmployeeDashboard/Sidebar";
 import { Outlet } from "react-router-dom";
-import NavBar from "../components/dashboard/NavBar";
+import Navbar from "../components/dashboard/Navbar";
 
 const EmployeeDashboard = () => {
 
@@ -8,7 +8,7 @@ const EmployeeDashboard = () => {
     <div className="flex h-screen">
       <Sidebar />
       <div className="flex-1 bg-gray-100">
-        <NavBar />
+        <Navbar />
         <Outlet />
       </div>
     </div>
