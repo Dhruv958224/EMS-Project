@@ -2,8 +2,6 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectToDatabase from "./db/db.js";
-
-// Routes
 import authRoutes from "./routes/authRoutes.js";
 import departmentRoutes from "./routes/department.js";
 import salaryRoutes from "./routes/salary.js";
@@ -19,12 +17,11 @@ app.use(express.json());
 app.use(cors({
   origin: 
 
-    "https://ems-frontend-nu-coral.vercel.app",
+    "http://localhost:5173",
   
   credentials: true
 }));
 
-// API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/department", departmentRoutes);
 app.use("/api/employee", employeeRoutes);
@@ -43,7 +40,7 @@ const startServer = async () => {
     });
   } catch (error) {
     console.error("❌ Failed to connect DB:", error.message);
-    process.exit(1); // stop if DB fails
+    process.exit(1);
   }
 };
 
